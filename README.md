@@ -4,19 +4,6 @@ A responsive, single-page resume website for Rishi Aryan Modi, a BBA student at 
 
 The current design uses monochrome light and dark themes, oversized typography, asymmetric layouts, and restrained olive accents. The header and footer no longer display the earlier RM monogram.
 
-## Run locally
-
-Open [index.html](index.html) directly in a modern browser. No installation, package manager, build command, or server is required.
-
-On the original development computer, paste this into the browser address bar:
-
-```text
-file:///C:/Users/LENOVO/Desktop/Personal_Website_Rishi/index.html
-```
-
-Keep `index.html`, `style.css`, and `script.js` in the same folder. Refresh the browser after editing; use a hard refresh if older styles remain cached.
-
-Inter is requested from Google Fonts at weights 400, 500, and 600. The site uses Arial and the browser's sans-serif fallback when the font cannot load. Open Sauce font files are not included. Layout, content, and local interactions work without an internet connection; external profile links require one.
 
 ## Project files
 
@@ -90,32 +77,4 @@ Responsive rules cover laptop widths of 1025-1439px and maximum widths of 1024, 
 
 Comments in `style.css` identify the techniques for assignment discussion.
 
-## Accessibility and contact links
 
-The page includes semantic landmarks, one main heading, labeled sections, a keyboard skip link, visible focus indicators, and accessible menu/theme button states. Menu and theme controls have minimum 44px heights; primary CTA buttons have minimum 48px heights. Reduced-motion preferences disable smooth scrolling, animations, and transitions.
-
-Email and phone links use `mailto:` and `tel:`; completing those actions depends on applications configured on the visitor's device. LinkedIn and GitHub open in new tabs, announce that behavior in the link text, and use `rel="noopener noreferrer"`. The site has no contact form or backend submission endpoint.
-
-## Maintenance
-
-- Edit biography, education, interests, and contact destinations in `index.html`.
-- Change colors, typography, spacing, and layout rules in `style.css`; use semantic variables so both themes stay consistent.
-- Keep section IDs and navigation hashes synchronized. If adding a navigation item, review `updateActiveLink()` in `script.js` and the mobile layout.
-- Keep the early theme initialization in `index.html` and the toggle logic in `script.js` on the same storage key (`ram-theme`). Remove that key in browser developer tools to restore automatic system-theme selection.
-- Preserve UTF-8 encoding when saving files so arrows, punctuation, and the theme symbol display correctly.
-
-## Verification
-
-During the editorial redesign, headless Chrome checks at exact widths of 1440, 1025, 810, 390, and 320px found no horizontal overflow. Theme switching, saved-theme persistence after reload, menu opening, Escape dismissal with focus return, link dismissal, and navigation without JavaScript passed. Representative desktop/tablet/phone screenshots were reviewed. The subsequent monogram removal was checked for remaining logo markup and balanced CSS braces; the full browser suite was not repeated for that small edit.
-
-For future changes, check the five viewport widths above in both themes, then verify keyboard focus, section links, mobile menu dismissal, reduced-motion behavior, and JavaScript-disabled navigation. A JavaScript syntax check is available if Node.js is installed:
-
-```sh
-node --check script.js
-```
-
-There is no committed automated test suite, package configuration, or build pipeline.
-
-## Repository and delivery scope
-
-Source repository: [rishiaryanmodi/Personal_Website-](https://github.com/rishiaryanmodi/Personal_Website-), with `main` as the working branch. The initial website source was committed and pushed there. Repository publication is separate from website hosting: GitHub Pages deployment and the assignment PDF have not been configured or generated in this work.
